@@ -1,0 +1,78 @@
+/* reset.css */
+
+/* Box sizing rules */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Remove default margin */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, figure, dl, dd, ul, ol, li, pre, form, fieldset, legend, input, button, textarea, menu {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    font-family: "Red Hat Text", sans-serif;
+    line-height: 1.5;
+    color: #000000;
+}
+
+/* Remove hyperlink text decoration */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove focus outline for elements */
+button, input, select, textarea {
+    outline: none;
+}
+
+/* Remove border on input types that do not need it */
+/*input[type="text"], input[type="password"], input[type="email"], textarea {
+    border: none;
+}*/
+
+/* Remove default button styles */
+/*button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}*/
+
+/* Remove default border-radius */
+/*button, input, select, textarea {
+    border-radius: 0;
+}*/
+
+/* Remove default background on input types */
+/*input[type="text"], input[type="password"], input[type="email"], textarea {
+    background: transparent;
+}*/
+
+/* Remove inner padding and border in Firefox 4+ */
+/*button::-moz-focus-inner, input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}*/
+
+/* Remove default vertical scrollbar in Edge and IE */
+/*textarea::-webkit-scrollbar {
+    display: none;
+}*/
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}

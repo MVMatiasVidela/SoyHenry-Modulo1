@@ -1,0 +1,409 @@
+ :root {
+    --blanco: white;
+    --blanco2:rgba(255,255,255,.2);
+    --negro: rgb(21, 21, 21);
+    --negro7: rgba(0, 0, 0, 0.75);
+    --negro5: rgba(0, 0, 0, 0.5);
+    --celeste: skyblue;
+    --tipo-principal: "Red Hat Text", sans-serif;
+    --tipo-titular: "Proza Libre", sans-serif;
+}
+  
+ * {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     box-sizing: border-box;
+     vertical-align: baseline;
+}
+ 
+
+li {
+   list-style-type: none;
+}
+  
+  
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+     font-weight: inherit;
+     font-size: inherit;
+}
+   
+ body {
+    position: relative;
+     font-family: var(--tipo-titular);
+     font-size: 100%;
+     min-height: 100vh;
+     background-color: black;
+     color: var(--blanco);
+     
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: inherit;
+     cursor:none; 
+    }
+   
+   /*HEADER*/
+   .header{
+     background: var(--negro);
+     position: relative;
+     z-index: 2;
+     
+     width: 100%;
+   }
+   .wrapper {
+     background-color: var(--negro);
+       color: var(--blanco);
+       
+   }
+   .navbar{
+       display: flex;
+       justify-content: space-between;
+       padding: 1em;
+   }
+   .brand{
+       font-size: 3em;
+   }
+   .brand span {
+   color: skyblue;
+   }
+   .menu li{
+     list-style: none;
+   }
+   .menu{
+     display: flex;
+     width: 30%;
+     justify-content: space-evenly;
+     align-items: center;
+    
+   }
+   .menu a {
+     color: var(--blanco);
+     margin-top: 1em;
+     text-decoration: none;
+     
+   }
+   .menu .activ {
+     color: skyblue;
+     
+   }
+   .menu a:hover{
+     box-shadow: 2px 2px 2px 2px #e0e0e0;
+     border-radius: 2em;
+     
+   }
+   
+   
+   /*MAIN*/
+   .main{
+     background: rgba(0, 0, 0, 0.329);
+     text-align: center;
+     position: relative;
+     z-index: 2;
+     cursor: none;
+   }
+   .h1{
+    font-size: 8em;
+
+   }
+   .h2{
+    font-size: 4em;
+    font-style: italic;
+   }
+   .h3{
+    font-size: 3em;
+    font-style: italic;
+   }
+   .h4{
+   
+   }
+   .p{
+    font-size: 20px;
+   }
+   
+    
+  
+  /*FONDOS*/
+  @keyframes circulo1{
+      from{
+        transform:rotate(0deg) scale(2);
+      }
+      to{
+        transform:rotate(360deg) scale(2);
+      }
+  }
+  @keyframes aparecer1{
+    from{
+      opacity: 0;
+      transform: translateY(50%);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  #cursor.mini{
+    transform: scale(0.7);
+  }
+  #cursor{
+    width: 4em;
+    height: 4em;
+    background-color: var(--celeste);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    border: 4px solid white;
+    pointer-events: none;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+  }
+  .circulos{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: blur(40px);
+    animation:circulo1 50s linear infinite both;
+    
+  }
+  .circulos .circulo{
+    position: absolute;
+    width: 55%;
+    height: 55%;
+    animation:circulo1 50s linear infinite both;
+  }
+  .circulos .circulo1{
+    top: 0%;
+    left: 0%;
+  }
+  .circulos .circulo1 .path{
+    fill: var(--celeste)
+  }
+  .circulos .circulo2{
+    top: 0%;
+    right: 0%;
+  }
+  .circulos .circulo2 .path{
+    fill: var(--celeste)
+  }
+  .circulos .circulo3{
+    bottom: 0%;
+    left: 0%;
+  }
+  .circulos .circulo3 .path{
+    fill: var(--celeste)
+  }
+  .circulos .circulo4{
+    bottom: 0%;
+    right: 0%;
+  }
+  .circulos .circulo4 .path{
+    fill: var(--celeste)
+  }
+
+
+  /*SECCIONES*/
+  .secInicio{
+    padding: 11em;
+  }
+  .secAbout{
+    padding: 11em; 
+  }
+  .secTech{
+    padding: 11em;
+  }
+  .cubo1{
+    box-shadow: 2px 2px 2px 2px skyblue;
+    border: 3px solid skyblue;
+    border-radius: 2vw;
+    background: black;
+    padding: 2em;
+    transition: 1s;
+  }
+  .cubo2{
+    box-shadow: 2px 2px 2px 2px orangered;
+    border: 3px solid orangered;
+    border-radius: 2vw;
+    background: black;
+    padding: 2em;
+    transition: 1s;
+  }
+  .cubo3{
+    box-shadow: 2px 2px 2px 2px orange;
+    border: 3px solid orange;
+    border-radius: 2vw;
+    background: black;
+    padding: 2em;
+    transition: 1s;
+    
+  }
+
+  .cubo1:hover,
+  .cubo2:hover,
+  .cubo3:hover{
+  background: gray;
+  }
+ 
+  .cubos{
+  margin-top: 4em;
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  
+ }
+ 
+ 
+.secActiv{
+  border-radius: 2vw;
+  background: var(--negro);
+  width: 50%;
+  font-size: 2em;
+  color: var(--celeste);
+  padding: 1em;
+  margin: 0 0 1em 1em;
+
+
+}
+
+
+
+
+
+.con-form{
+  display: flex;
+  background: var(--negro);
+  border: 2px solid skyblue;
+  border-radius: 2em;
+  margin:auto;
+  padding: 1em;
+  width: 80%;
+  flex-direction: column;
+
+}
+  /*footer*/
+  .footer{
+    background: var(--negro);
+    position: relative;
+    z-index: 2;
+    padding: 1em;
+   flex-direction: row;
+   display: flex;
+   justify-content: center;
+    
+  }
+  .span{
+    display: flex;
+  align-items: center;
+  text-align: center;
+  }
+
+  .img{
+    box-shadow: 2px 2px 2px 2px yellow;
+    border: 2px solid yellow;
+    border-radius: 2em;
+  }
+
+  .icons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 4em;
+  }
+
+  .henry{
+    margin: 2em;
+  }
+
+  .card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    div{
+      box-shadow: 2px 2px 2px 2px skyblue;
+      background-color: gray;
+      border-radius: 1em;
+      width: 40%;
+      margin: 0.5em;
+      padding: 0.5em;
+    }
+      h4{
+        font-size: 2em;
+
+      }
+      p{
+        font-size:1em ;
+      }
+      
+      img{
+        width: 100%;
+      }
+    }
+
+    .secCard{
+      width: 50%;
+    flex-wrap: wrap;
+    }
+    .contCard{
+      display: flex;
+    padding: 1em;
+    }
+     .formulario {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+           .formulario h4 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+         .control {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+  .control{
+    border: 2px solid ;
+    font-family: var(--tipo-principal);
+    width: 95%;
+    background: var(--negro);
+    border-radius: 2em;
+    padding: 2em;
+    color: var(--celeste);
+  }
+   #boton {
+            display: block;
+            width: 50%;
+            padding: 10px;
+            background-color: gray;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #boton:hover {
+            background-color: skyblue ;
+        }
+
+
+           html {
+      scroll-behavior: smooth;
+    }
